@@ -102,14 +102,13 @@ const LoadingOverlay = ({ show }: LoadingOverlayProps) => {
       <div className="relative z-10 w-96 text-center space-y-6 bg-black/30 p-8 rounded-xl border border-[#00ff00]/20 backdrop-blur-md">
         <h2 className="text-4xl font-bold text-[#00ff00] animate-pulse">
           Generating Signal
-          <style jsx>{`
-            h2 {
-              text-shadow:
-                0 0 10px rgba(0, 255, 0, 0.7),
-                0 0 20px rgba(0, 255, 0, 0.5),
-                0 0 30px rgba(0, 255, 0, 0.3);
-            }
-          `}</style>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                h2 { text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.3); }
+              `,
+            }}
+          />
         </h2>
 
         <div className="relative h-2 bg-[#0a0a0a] rounded-full overflow-hidden border border-[#00ff00]/20">
@@ -120,25 +119,14 @@ const LoadingOverlay = ({ show }: LoadingOverlayProps) => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes fall {
-          from {
-            transform: translateY(-100%);
-          }
-          to {
-            transform: translateY(100%);
-          }
-        }
-
-        @keyframes glow {
-          from {
-            filter: brightness(1);
-          }
-          to {
-            filter: brightness(1.5);
-          }
-        }
-      `}</style>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            @keyframes fall { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+            @keyframes glow { from { filter: brightness(1); } to { filter: brightness(1.5); } }
+          `,
+        }}
+      />
     </div>
   );
 };

@@ -73,15 +73,13 @@ const Login = () => {
       <div className="flex-grow flex flex-col items-center justify-center p-4">
         <h1 className="text-4xl sm:text-6xl font-bold text-[#00ff00] mb-8 sm:mb-12 tracking-wider animate-pulse">
           TRADER RABBY
-          <style jsx>{`
-            h1 {
-              text-shadow:
-                0 0 10px rgba(0, 255, 0, 0.7),
-                0 0 20px rgba(0, 255, 0, 0.5),
-                0 0 30px rgba(0, 255, 0, 0.3),
-                0 0 40px rgba(0, 255, 0, 0.1);
-            }
-          `}</style>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                h1 { text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.1); }
+              `,
+            }}
+          />
         </h1>
 
         <form
